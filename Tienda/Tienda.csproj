@@ -1,0 +1,391 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DAC19F97-E682-4A2F-BAE6-0339AB7D9B5E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Tienda</RootNamespace>
+    <AssemblyName>Tienda</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BarcodeStandard, Version=2.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\BarcodeLib.2.4.0\lib\netstandard2.0\BarcodeStandard.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI">
+      <HintPath>D:\ProyectosPC 2022\EscuelaPrimaria\EscuelaPrimaria\bin\Debug\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.5.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="ProyectoZ.UI">
+      <HintPath>D:\ProyectosPC 2022\ProyectoZLauncher\ProyectoZ.UI\bin\Debug\ProyectoZ.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing.Common, Version=4.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Drawing.Common.5.0.2\lib\net461\System.Drawing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.5.0.0\lib\net45\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=5.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.5.0.1\lib\net461\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=5.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.5.0.2\lib\net461\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Checkout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Checkout.Designer.cs">
+      <DependentUpon>Checkout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CheckoutAddProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckoutAddProduct.Designer.cs">
+      <DependentUpon>CheckoutAddProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CheckoutMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckoutMain.Designer.cs">
+      <DependentUpon>CheckoutMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class\Carrito.cs" />
+    <Compile Include="Class\EAN13.cs" />
+    <Compile Include="Class\Etiqueta.cs" />
+    <Compile Include="Class\Globals.cs" />
+    <Compile Include="Class\IniReader.cs" />
+    <Compile Include="Class\Notification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Class\Notification.Designer.cs">
+      <DependentUpon>Notification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class\Productos.cs" />
+    <Compile Include="Class\Finanzas.cs" />
+    <Compile Include="Class\Ventas.cs" />
+    <Compile Include="DeleteProductForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteProductForm.Designer.cs">
+      <DependentUpon>DeleteProductForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DiscountMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DiscountMain.Designer.cs">
+      <DependentUpon>DiscountMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinanzasDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinanzasDetails.Designer.cs">
+      <DependentUpon>FinanzasDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinanzasDetailsDate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinanzasDetailsDate.Designer.cs">
+      <DependentUpon>FinanzasDetailsDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinanzasMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinanzasMain.Designer.cs">
+      <DependentUpon>FinanzasMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GastoMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GastoMain.Designer.cs">
+      <DependentUpon>GastoMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GastosForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GastosForm.Designer.cs">
+      <DependentUpon>GastosForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductosForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductosForm.Designer.cs">
+      <DependentUpon>ProductosForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductosMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductosMain.Designer.cs">
+      <DependentUpon>ProductosMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductoSSForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductoSSForm.Designer.cs">
+      <DependentUpon>ProductoSSForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SearchProductMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchProductMain.Designer.cs">
+      <DependentUpon>SearchProductMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SQL\SQLCon.cs" />
+    <EmbeddedResource Include="Checkout.resx">
+      <DependentUpon>Checkout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckoutAddProduct.resx">
+      <DependentUpon>CheckoutAddProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckoutMain.resx">
+      <DependentUpon>CheckoutMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Class\Notification.resx">
+      <DependentUpon>Notification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteProductForm.resx">
+      <DependentUpon>DeleteProductForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DiscountMain.resx">
+      <DependentUpon>DiscountMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinanzasDetails.resx">
+      <DependentUpon>FinanzasDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinanzasDetailsDate.resx">
+      <DependentUpon>FinanzasDetailsDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinanzasMain.resx">
+      <DependentUpon>FinanzasMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GastoMain.resx">
+      <DependentUpon>GastoMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GastosForm.resx">
+      <DependentUpon>GastosForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductosForm.resx">
+      <DependentUpon>ProductosForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductosMain.resx">
+      <DependentUpon>ProductosMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductoSSForm.resx">
+      <DependentUpon>ProductoSSForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SearchProductMain.resx">
+      <DependentUpon>SearchProductMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_clothes_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_clothes_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_clothes_64px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_search_26px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_checkout_80px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_checkout_80px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_discount_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_cancel_26px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_edit_property_80px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_edit_property_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_checkout_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_cash_register_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_undo_26px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_product_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_save_26px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close Window_ 2 48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Maximize Window_2 48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Minimize Window_2 48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Restore Window 2_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_shop_80px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Checkmark_28px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Error_28px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Info_28px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Multiply_18px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Warning_28px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_details_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_request_money_80px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_ledger_80px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_general_ledger_80px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_general_ledger_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_general_ledger_100px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_ledger_30px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_ledger_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_barcode_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_eye_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_eye_30px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_invisible_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_invisible_64px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
